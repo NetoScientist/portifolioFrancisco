@@ -1,5 +1,22 @@
 [
   {
+    "path": "posts/2021-12-08-analisebaserais/",
+    "title": "Analisando Dados Base",
+    "description": "Colocando a mão na massa.",
+    "author": [
+      {
+        "name": "francisco neto",
+        "url": {}
+      }
+    ],
+    "date": "2021-12-08",
+    "categories": [],
+    "contents": "\r\nDistill is a publication format for scientific and technical writing, native to the web.\r\nLearn more about using Distill at https://rstudio.github.io/distill.\r\n\r\n\r\n\r\n",
+    "preview": {},
+    "last_modified": "2021-12-08T14:41:17-03:00",
+    "input_file": "analisebaserais.knit.md"
+  },
+  {
     "path": "posts/welcome/",
     "title": "Welcome to Portifolio em R do Francisco",
     "description": "Welcome to our new blog, Portifolio em R do Francisco. We hope you enjoy \nreading what we have to say!",
@@ -30,7 +47,7 @@
     "categories": [],
     "contents": "\r\nEsse é meu primeiro projeto\r\n\r\n\r\n\r\n",
     "preview": {},
-    "last_modified": "2021-12-07T20:19:51-03:00",
+    "last_modified": "2021-12-07T20:22:12-03:00",
     "input_file": "anlise-da-base-rais.knit.md"
   }
 ]
