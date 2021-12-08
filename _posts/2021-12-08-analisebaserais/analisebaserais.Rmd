@@ -15,3 +15,46 @@ output:
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 ```
+
+Nesse relatório estamos interessados em responder a pergunta:
+
+"Quanto ganha um cientista de dados?"
+
+Para isso vamos ultilizar a base da RAIS anonimizadas
+
+# Acessando os Dados
+
+Vamos ultilizar [o datalake da iniciativa base de dados](https://basedados.org).
+
+
+```{r message=FALSE, warning=FALSE}
+
+library(bigrquery)
+library(dplyr)
+
+
+```
+
+Abaixo está o código que carrega as primeiras 5 linhas da tabelas microdados
+
+```{r}
+
+# Como eu faria se ler de um arquivo
+
+#tabela_normal <- read.csv("https://raw.githubusercontent.com/curso-r/main-r4ds-1/master/dados/imdb.csv")
+#head(tabela_normal, 5)
+
+# Como eu faço se uso SGDB 
+
+conexao <- dbConnect(
+  bigquery(), 
+  project = "basedosdados",
+  dataset = "br_me_rais",
+  billing = "semana-curso-em-r"
+)
+
+primeiras_cinco_linhas <- collect(head(select(tbl(conexao, "microdados_vinculos"), everything()), 5))
+
+primeiras_cinco_linhas
+
+```
